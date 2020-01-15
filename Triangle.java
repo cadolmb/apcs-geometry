@@ -1,18 +1,17 @@
-import java.util.*;
-public class Triangle{
-    Point point1;
-    Point point2;
-    Point point3;
+public class Triangle {
 
-    public triangle(Point point1, Point point2, Point point3){
-        this.point1 = point1;
-        this.point2 = point2;
-        this.point3 = point3;
+    private Point a;
+    private Point b;
+    private Point c;
+
+    public Triangle(Point a, Point b, Point c) {
+        this.a = a;
+        this.b = b;
+        this.c = c;
     }
 
-    public double findArea(){
-        return (Math.abs((point1.x * (point2.y - point3.y)) + 
-                         (point2.x * (point3.y - point1.y)) +
-                         (point3.x * (point1.y - point2.y)) / 2.0);
+    public double area() {
+        return Math.abs((a.x * (b.y - c.y) + b.x * (c.y - a.y) + c.x * (a.y-b.y))*0.5);
     }
+
 }
