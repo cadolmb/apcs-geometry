@@ -1,7 +1,7 @@
 public class Point {
 
-    private double x;
-    private double y;
+    public double x;
+    public double y;
 
     public Point(double x, double y) {
         this.x = x;
@@ -9,16 +9,15 @@ public class Point {
     }
 
     public static distance(Point a, Point b) {
-        double dx = Math.abs(a.x() - b.x());
-        double dy = Math.abs(a.y() - b.y());
+        double dx = Math.abs(a.x - b.x);
+        double dy = Math.abs(a.y - b.y);
         return Math.hypot(dx, dy);
     }
 
-    public double x() {
-        return x;
+    public distance(Point p) {
+        double dx = Math.abs(this.x - p.x);
+        double dy = Math.abs(this.y - p.y);
+        return Math.hypot(dx, dy);
     }
-
-    public double y() {
-        return y;
-    }
+    
 }
