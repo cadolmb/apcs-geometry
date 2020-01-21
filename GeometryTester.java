@@ -19,5 +19,10 @@ class GeometryTester {
         System.out.println("perimiter of s2: " + s2.perimeter());
 
         System.out.println("\ndo s1 and s2 intersect? " + Square.squaresIntersect(s1, s2));
+
+        Point d = new Point(-1, -1);
+        System.out.println("\nis b inside s1? " + Square.pointInsideSquare(b, s1));
+        System.out.println("is d inside s1? " + Square.pointInsideSquare(d, s1));
+        
     }
 }

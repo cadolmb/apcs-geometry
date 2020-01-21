@@ -42,4 +42,23 @@ public class Square {
         return true;
     }
 
+    public static boolean pointInsideSquare(Point p, Square s) {
+        if ( p.x < s.xLeft() || p.x > s.xRight() ) return false;
+        if ( p.y < s.yBottom() || p.x > s.yTop() ) return false;
+        return true;
+    }
+
+    public boolean intersects(Square s) {
+        if ( this.xRight() < s.xLeft() ) return false;
+        if ( this.xLeft() > s.xRight() ) return false;
+        if ( this.yBottom() > s.yTop() ) return false;
+        if ( this.yTop() < s.yBottom() ) return false;
+        return true;
+    }
+
+    public boolean intersects(Point p) {
+        if ( p.x < this.xLeft() || p.x > this.xRight() ) return false;
+        if ( p.y < this.yBottom() || p.x > this.yTop() ) return false;
+        return true;
+    }
 }
